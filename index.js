@@ -11,6 +11,7 @@ if (!input[1]) {
 }
 
 function calculate(low, high) {
+    console.time('executionTime'); //PERFORMANCE TRACKING
     if (high > Number.MAX_SAFE_INTEGER) {
         console.error(`Invalid input - enter an integer between 1 and ${Number.MAX_SAFE_INTEGER}`);
         return;
@@ -35,12 +36,14 @@ function calculate(low, high) {
             longestSequence.og_val = result.og_val;
         }
 
-        console.log(`Input Value: ${result.og_val}, Iterations: ${result.iterations}`);
+        console.log(`** Input Value: ${result.og_val}, Iterations: ${result.iterations} **`);
     }
 
     if (low !== high) {
-        console.log(`*** Longest Sequence: ${longestSequence.count} iterations, Input Value: ${longestSequence.og_val}, Range: ${low} - ${high} ***`);
+        console.log(`**** Longest Sequence: ${longestSequence.count} iterations, Input Value: ${longestSequence.og_val}, Range: ${low} - ${high} ****`);
     }
+
+    console.timeEnd('executionTime'); //PERFORMANCE TRACKING
 }
 
 function runCollatz(value) {
