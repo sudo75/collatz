@@ -28,7 +28,19 @@ If two values are passed (a min and a max), the program will calculate for all i
 
 ## Debug commands
 
-To find the largest accepted integer:
+Get greatest allowed integer (formatted with commas):
 ```bash
 npm run debug maxint
+```
+
+Get greatest allowed integer (unformatted):
+```bash
+npm run debug maxint_uf
+```
+
+## Help commands
+
+Get a list of available commands:
+```bash
+npm run help
 ```
