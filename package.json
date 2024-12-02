@@ -1,6 +1,7 @@
 {
     "scripts": {
         "collatz": "node index.js normal",
+        "help": "node help.js",
         "collatz-showall": "node index.js showall",
         "debug": "node debug.js"
     }
