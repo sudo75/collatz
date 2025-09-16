@@ -13,6 +13,11 @@ To run normally:
 npm run collatz <min> <max>
 ```
 
+To run without showing all results:
+```bash
+npm run collatz-fast <min> <max>
+```
+
 To show all steps/calculations:
 ```bash
 npm run collatz-showall <min> <max>

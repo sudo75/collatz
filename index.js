@@ -1,4 +1,5 @@
 let showAll = false;
+let fast = false;
 
 const input = [process.argv[2], Number(process.argv[3]), Number(process.argv[4])];
 if (!input[1]) {
@@ -25,6 +26,9 @@ function calculate(low, high) {
         case 'showall':
             showAll = true;
             break;
+        case 'fast':
+            fast = true;
+            break;
     }
     
     let longestSequence = {count: 0, og_val: low};
@@ -36,7 +40,7 @@ function calculate(low, high) {
             longestSequence.og_val = result.og_val;
         }
 
-        console.log(`** Input Value: ${result.og_val}, Iterations: ${result.iterations} **`);
+        if (!fast) console.log(`** Input Value: ${result.og_val}, Iterations: ${result.iterations} **`);
     }
 
     if (low !== high) {
